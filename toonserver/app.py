@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful_swagger_2 import Api
 from flask_swagger_ui import get_swaggerui_blueprint
-
+from toonserver import apitools
 
 app = Flask(__name__)
 
@@ -21,3 +21,6 @@ swaggerui_bp = get_swaggerui_blueprint(
 )
 
 app.register_blueprint(swaggerui_bp, url_prefix='/api/docs')
+
+apitools.init(app)
+apitools.add_resources(api)
