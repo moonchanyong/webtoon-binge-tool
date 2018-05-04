@@ -295,12 +295,11 @@ class Spec(object):
             if default:
                 default = type_table[p.type](default)
 
-                parser.add_argument(
-                    p.name,
-                    type=type_table[p.type],
-                    required=p.required,
-                    default=default)
-
+            parser.add_argument(
+                p.name,
+                type=type_table[p.type],
+                required=p.required,
+                default=default)
         return parser
 
     def constraint_table(self):
