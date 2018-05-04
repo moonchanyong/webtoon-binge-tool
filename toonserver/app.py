@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful_swagger_2 import Api
 from flask_swagger_ui import get_swaggerui_blueprint
-from toonserver import apitools
+from toonserver import apitools, test_api
 
 app = Flask(__name__)
 
